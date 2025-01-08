@@ -1,0 +1,29 @@
+name: Analyze
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: devbox installer
+        uses: jetify-com/devbox-install-action@a03caf5813591bc882139eba6ae947930a83a427
+        with:
+          project-path: .
+          enable-cache: true
+          refresh-cli:  false
+          skip-nix-installation: false
+          
+      - name: flutter analzse
+        run: devbox run analyze
