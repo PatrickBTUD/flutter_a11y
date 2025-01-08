@@ -25,5 +25,5 @@ jobs:
           refresh-cli:  false
           skip-nix-installation: false
           
-      - name: flutter analzse
+      - name: flutter analyze
         run: devbox run analyze
