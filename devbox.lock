@@ -1,0 +1,53 @@
+{
+  "lockfile_version": "1",
+  "packages": {
+    "temurin-bin-17@latest": {
+      "last_modified": "2024-07-07T07:43:47Z",
+      "resolved": "github:NixOS/nixpkgs/b60793b86201040d9dee019a05089a9150d08b5b#temurin-bin-17",
+      "source": "devbox-search",
+      "version": "17.0.11",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/2d6rfr7i5zk5w8zvfmd1r2l09pmzgz0c-temurin-bin-17.0.11",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/2d6rfr7i5zk5w8zvfmd1r2l09pmzgz0c-temurin-bin-17.0.11"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/xk5an6bvr31255wswn1xamx0lvsfn7pf-temurin-bin-17.0.11",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/xk5an6bvr31255wswn1xamx0lvsfn7pf-temurin-bin-17.0.11"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/scinqaw1rmfddmmxprnym4ccn5k94c6l-temurin-bin-17.0.11",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/scinqaw1rmfddmmxprnym4ccn5k94c6l-temurin-bin-17.0.11"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/8a3b40b63waavsyvdv1y822rv7lqm6kj-temurin-bin-17.0.11",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/8a3b40b63waavsyvdv1y822rv7lqm6kj-temurin-bin-17.0.11"
+        }
+      }
+    }
+  }
+}

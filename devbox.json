@@ -1,0 +1,16 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.13.6/.schema/devbox.schema.json",
+  "name": "app",
+  "packages": [
+    "temurin-bin-17@latest",
+    "github:NixOS/nixpkgs/nixos-unstable#flutter"
+  ],
+  "shell": {
+    "scripts": {
+      "format": "dart format -l 120 .",
+      "fvm_install": "fvm install",
+      "test": "flutter test",
+      "analyze": "flutter analyze"
+    }
+  }
+}
