@@ -9,6 +9,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  accessibility_tools: ^2.3.0
+
 
 dev_dependencies:
   flutter_test:

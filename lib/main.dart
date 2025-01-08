@@ -1,3 +1,4 @@
+import 'package:accessibility_tools/accessibility_tools.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,6 +11,10 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      builder: (context, child) => AccessibilityTools(
+        buttonsAlignment: ButtonsAlignment.bottomLeft,
+        child: child,
+      ),
       home: Scaffold(
         appBar: AppBar(
           //title is used by screen readers to tell about heading
