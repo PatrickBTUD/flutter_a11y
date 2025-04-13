@@ -1,8 +1,10 @@
 import 'package:accessibility_tools/accessibility_tools.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_a11y/a11y_app.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const ProviderScope(child: MainApp()));
 }
 
 class MainApp extends StatelessWidget {
@@ -11,26 +13,16 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        colorSchemeSeed: Color(0xFF78FFBE),
+        useMaterial3: true,
+      ),
       builder: (context, child) => AccessibilityTools(
         buttonsAlignment: ButtonsAlignment.bottomLeft,
+        minimumTapAreas: MinimumTapAreas.cupertino,
         child: child,
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          //title is used by screen readers to tell about heading
-          title: const Text('Flutter A11Y App'),
-        ),
-        floatingActionButton: FloatingActionButton(
-          //tooltip is used by screen readers to describe the button
-          tooltip: 'Increment',
-          onPressed: () {
-            debugPrint('FloatingActionButton pressed');
-          },
-        ),
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+      home: A11yApp(),
     );
   }
 }

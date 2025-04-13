@@ -1,0 +1,37 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug-dev",
+            "type": "dart",
+            "request": "launch",
+            "program": "lib/main.dart",
+            "flutterMode": "debug"
+        },
+        {
+            "name": "Profile-dev",
+            "type": "dart",
+            "request": "launch",
+            "program": "lib/main.dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "Release-dev",
+            "type": "dart",
+            "request": "launch",
+            "program": "lib/main.dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "Run/Debug Integration Tests",
+            "type": "dart",
+            "request": "launch",
+            "toolArgs": [
+                "--flavor",
+                "dev"
+            ],
+            "path": "integration_test",
+            "templateFor": ""
+        }
+    ]
+}
