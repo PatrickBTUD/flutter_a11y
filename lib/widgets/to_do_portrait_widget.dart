@@ -22,17 +22,20 @@ class ToDoPortraitWidget extends ConsumerWidget {
             title: Text(todo.title),
             trailing: Checkbox(
               value: todo.isSelected,
+              semanticLabel: 'Marked as ${todo.isSelected ? 'done' : 'not done'}',
               onChanged: (value) {
                 ref.read(todoControllerProvider.notifier).toggle(todo);
               },
             ),
             onTap: () {
               ref.read(todoControllerProvider.notifier).setCurrentToDo(todo);
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) => ToDoDetailWidget(),
-                ),
-              );
+              if (MediaQuery.orientationOf(context) == Orientation.portrait) {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => ToDoDetailWidget(),
+                  ),
+                );
+              }
             },
           );
         });

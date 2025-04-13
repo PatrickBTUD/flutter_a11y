@@ -8,6 +8,14 @@ class ToDoWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Column(
+      children: [
+        Text.rich(
+          TextSpan(
+              text: '${toDo.title} as a Text.rich Widget, which scales very well',
+              style: Theme.of(context).textTheme.bodyMedium),
+        ),
+      ],
+    );
   }
 }

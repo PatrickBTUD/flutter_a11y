@@ -25,22 +25,6 @@ class A11yApp extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           spacing: 10,
           children: [
-            Text('Text Widget'),
-            RichText(
-              text: TextSpan(text: 'Rich Text Widget', style: Theme.of(context).textTheme.bodyMedium),
-            ),
-            Text.rich(
-              TextSpan(text: 'Text.rich Widget', style: Theme.of(context).textTheme.bodyMedium),
-            ),
-            Image.asset(
-              'assets/flutter_logo.png',
-              semanticLabel: '',
-            ),
-            TextField(
-              decoration: InputDecoration(
-                labelText: 'TextField',
-              ),
-            ),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(

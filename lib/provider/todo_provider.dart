@@ -34,12 +34,13 @@ class TodoController extends _$TodoController {
   }
 
   void toggle(ToDo toDo) {
-    final todos = state.todos;
-    for (var todo in todos) {
-      if (todo.id == toDo.id) {
-        todo = toDo.copyWith(isSelected: !todo.isSelected);
-      }
-    }
-    state = state.copyWith(todos: todos);
+    state = state.copyWith(
+      todos: state.todos.map((todo) {
+        if (todo.id == toDo.id) {
+          return todo.copyWith(isSelected: !todo.isSelected);
+        }
+        return todo;
+      }).toList(),
+    );
   }
 }
