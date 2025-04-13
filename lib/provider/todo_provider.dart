@@ -18,6 +18,15 @@ class TodoController extends _$TodoController {
     state = state.copyWith(currentToDo: todo);
   }
 
+  void toggleCurrentToDo() {
+    if (state.currentToDo != null) {
+      state = state.copyWith(
+        currentToDo: state.currentToDo!.copyWith(isSelected: !state.currentToDo!.isSelected),
+      );
+      toggle(state.currentToDo!);
+    }
+  }
+
   void addRandomToDo() {
     final todo = ToDo(
       id: state.todos.length,

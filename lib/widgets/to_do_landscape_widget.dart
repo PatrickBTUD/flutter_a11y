@@ -13,7 +13,9 @@ class ToDoLandscapeWidget extends StatelessWidget {
           child: ToDoPortraitWidget(),
         ),
         Expanded(
-          child: ToDoDetailWidget(),
+          child: ToDoDetailWidget(
+            index: 0,
+          ),
         ),
       ],
     );

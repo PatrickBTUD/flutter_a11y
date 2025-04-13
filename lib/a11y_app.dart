@@ -36,25 +36,6 @@ class A11yApp extends StatelessWidget {
               },
               child: const Text('Go To ToDo List'),
             ),
-            Semantics(
-              button: true,
-              label: 'A',
-              child: GestureDetector(
-                onTap: () {
-                  debugPrint('GestureDetector pressed');
-                },
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: Colors.blue,
-                    borderRadius: BorderRadius.circular(2),
-                  ),
-                  child: Text(
-                    'B',
-                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.teal),
-                  ),
-                ),
-              ),
-            ),
           ],
         ),
       ),

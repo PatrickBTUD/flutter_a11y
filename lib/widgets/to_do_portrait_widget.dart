@@ -32,7 +32,7 @@ class ToDoPortraitWidget extends ConsumerWidget {
               if (MediaQuery.orientationOf(context) == Orientation.portrait) {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => ToDoDetailWidget(),
+                    builder: (context) => ToDoDetailWidget(index: index),
                   ),
                 );
               }
